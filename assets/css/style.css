@@ -28,6 +28,10 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
 
 
 
@@ -72,13 +76,30 @@ nav {
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
+    top: 100%;
 
 }
+
+/* Nav toggle  */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle-label {
+    font-size: 2rem;
+}
+    
+
 
 /* Main */
 main {
     background-color: lightblue ;
     flex: 1 0 auto;
+    margin-top: 47px;
 /* make the main element take up any surplus space to push footer down */
 
        
@@ -87,3 +108,31 @@ main {
 footer {
     background-color: orange;
 }
+
+/* Media querry: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+}
+    /* Header */
+    nav {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1rem;
+
+}
+#menu {
+    display: flex;
+}
+#menu li {
+    padding-left:  1rem;
+
+}
+
+.nav-toggle-label {
+    display: none;
+}
+
+
+    
